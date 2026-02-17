@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy-700: #1B2A4A;
+  --navy-600: #2C3E6B;
+  --navy-500: #3D5A99;
+  --accent-blue: #4A90D9;
+  --accent-green: #27AE60;
+  --accent-red: #E74C3C;
+  --accent-orange: #F39C12;
+}
+
+body {
+  @apply bg-gray-50 text-gray-900 antialiased;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Input cells styled like spreadsheet */
+.input-cell {
+  @apply bg-yellow-50 border-2 border-blue-300 text-blue-700 font-semibold 
+         rounded px-3 py-2 text-right focus:outline-none focus:ring-2 
+         focus:ring-blue-500 focus:border-transparent transition-all;
+}
+
+.input-cell:hover {
+  @apply border-blue-400 bg-yellow-100;
+}
+
+/* Card component */
+.card {
+  @apply bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden;
+}
+
+.card-header {
+  @apply px-6 py-4 border-b border-gray-100;
+}
+
+/* Metric cards */
+.metric-card {
+  @apply bg-white rounded-xl shadow-sm border border-gray-200 p-5 
+         flex flex-col gap-1 transition-all hover:shadow-md;
+}
+
+.metric-value {
+  @apply text-2xl font-bold tracking-tight;
+}
+
+.metric-label {
+  @apply text-xs font-medium text-gray-500 uppercase tracking-wider;
+}
+
+/* Table styles */
+.data-table {
+  @apply w-full text-sm;
+}
+
+.data-table thead th {
+  @apply bg-navy-700 text-white text-xs font-semibold uppercase tracking-wider 
+         px-4 py-3 text-left;
+}
+
+.data-table tbody tr {
+  @apply border-b border-gray-100 transition-colors;
+}
+
+.data-table tbody tr:hover {
+  @apply bg-blue-50;
+}
+
+.data-table tbody tr:nth-child(even) {
+  @apply bg-gray-50;
+}
+
+.data-table tbody td {
+  @apply px-4 py-3;
+}
+
+/* Status badges */
+.badge-active { @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800; }
+.badge-paid { @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600; }
+.badge-deferred { @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800; }
+
+/* Progress bar */
+.progress-bar {
+  @apply h-3 rounded-full bg-gray-200 overflow-hidden;
+}
+
+.progress-fill {
+  @apply h-full rounded-full transition-all duration-700 ease-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Loading skeleton */
+.skeleton {
+  @apply animate-pulse bg-gray-200 rounded;
+}
