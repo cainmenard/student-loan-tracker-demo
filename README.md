@@ -2,7 +2,7 @@
 
 A full-stack web application for managing and optimizing student loan repayment using the **Avalanche method** (highest interest rate first).
 
-**[Live Demo →](#)** *(replace with your Vercel URL)*
+**[Live Demo →](#)** https://student-loan-tracker-demo.vercel.app/
 
 ---
 
